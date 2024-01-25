@@ -1,0 +1,40 @@
+body{
+    background-image: url(./abstract-bangles-4k-7c-960x540.jpg);
+    width:100%;
+    background-size: 100%;
+    margin: 0%;
+    padding: 0%;
+    background-attachment: fixed;
+}
+h2{
+    color:aliceblue;
+    text-align: center;
+    padding-top: 3%;
+    font-size: 50px;
+
+}
+h1{
+    color: aliceblue;
+    text-align: center;
+    font-size: 80px;
+}
+#about{
+    font-size: 30px;
+  padding-left: 50%;
+    
+}
+#skill{
+    font-size: 30px;
+    padding-left: 4%;
+    
+}
+#certificates{
+    font-size: 30px;
+    padding-left: 4%;
+    
+
+}
+#contact{
+    font-size: 30px;
+    padding-left: 4%;
+}
