@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+        <style>
+         *{
+            margin: 0%;
+            padding: 0%;
+            font-size:30px;
+
+           
+        }
+        body{
+            align-items: center;
+            background-color: beige;
+            margin-left:35%;
+            margin-top: 10%;
+        }
+        .main{
+            height:470px;
+            width: 400px;
+            background-color:rgb(57, 54, 52) ;
+            border: 2px solid rgb(17, 4, 4);
+            border-radius: 6px;
+            padding: 7px;
+            position: absolute;
+        }
+        .button{
+            height: 60px; 
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            transition: 1s;
+        }
+        input[type="button"]{
+            width:100px;
+            padding: 20px 40px;
+            background-color:#2a3835;
+            cursor: pointer; 
+            border-radius: 6px;
+            font-size:large;
+            color: rgb(161, 108, 108);
+            
+        }
+        input[type="text"]{
+            width: 98%;
+            height: 94px;
+            border: 3px solid black;
+            padding: 1px;
+            text-align: right;
+            display: flex;
+            border-radius: 6px;
+            margin: auto;
+            border-style:groove;
+    
+        }
+        input[type="button"]:hover{
+            background-color: black;
+            color: aliceblue;
+        }
+    </style>
+    <div class="main">
+        
+        <input type="text" id="result">
+        <br>
+        <div class="button">
+            <input type="button" value="AC" onclick="clr()">
+            <input type="button" value="%" onclick="sol('%')">
+            <input type="button" value="←" onclick="back('<-')">
+            <input type="button" value="/" onclick="sol('/')">
+            <input type="button" value="7" onclick="sol('7')">
+            <input type="button" value="8" onclick="sol('8')">
+            <input type="button" value="9" onclick="sol('9')">
+            <input type="button" value="x" onclick="sol('*')">
+            <input type="button" value="4" onclick="sol('4')">
+            <input type="button" value="5" onclick="sol('5')">
+            <input type="button" value="6" onclick="sol('6')">
+            <input type="button" value="-" onclick="sol('-')">
+            <input type="button" value="1" onclick="sol('1')">
+            <input type="button" value="2" onclick="sol('2')">
+            <input type="button" value="3" onclick="sol('3')">
+            <input type="button" value="+" onclick="sol('+')">
+            <input type="button" value="00" onclick="sol('00')">
+            <input type="button" value="0" onclick="sol('0')">
+            <input type="button" value="." onclick="sol('.')">
+            <input type="button" value="=" onclick="result('=')">
+        </div>
+        <br>
+    </div>
+    <script>
+        function sol(val){
+            var v=document.getElementById("result");
+            v.value+=val;
+        }
+        function result(){
+            var n1=document.getElementById("result").value;
+            var n2=eval(n1);
+            document.getElementById("result").value=n2;
+        }
+        function clr(){
+            var c=document.getElementById("result");
+            c.value="";
+        }
+        function back(){
+        var e=document.getElementById("result");
+        e.value=e.value.slice(0,-1);
+        }
+    </script>
+</body>
+</html>
+
